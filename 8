@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-camera> 
+            <a-cursor fuse= "true" fuse-timeout= "5000"></a-cursor>
+            </a-camera>
+        <a-box
+            position="0 1 -5"
+            depth="2"
+            height="2"
+            width="2"
+            animation="
+                property: rotation;
+                from: 0 0 0;
+                to: 0 360 0;
+                dur: 200;
+                easing: easeInOutExpo;
+                loop: true;
+                startEvents: click;
+                "
+                animation__2="
+                property: color;
+                from:  "tomato" ;
+                to:  "green" ;
+                startEvents: click;
+                
+            "
+            color="tomato">
+        </a-box>
+    
+            <a-camera> 
+            <a-cursor fuse= "true" fuse-timeout= "5000"></a-cursor>
+            </a-camera>
+        <a-box
+            position="0 4 -3"
+            depth="2"
+            height="2"
+            width="2"
+            animation="
+                property: position;
+                from: 0 4 -3;
+                to: 1000 0 0;
+                dur: 90000;
+                easing: easeInOutExpo;
+                loop: 67;
+                startEvents: click;"
+                
+                animation__2="
+                property: rotation;
+                from: 0 0 0;
+                to: 0 360 0;
+                dur: 200;
+                easing: easeInOutExpo;
+                loop: true;
+                startEvents: click;
+                
+            "
+            color="tomato">
+            "
+            color="tomato">
+        </a-box>
+        </a-scene>
+    </body>
+</html>
