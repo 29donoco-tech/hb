@@ -50,33 +50,7 @@
 
         <a-scene>
             <!-- JavaScript -->
-    <script>
-      const music = document.getElementById('bg-music');
-      const startBtn = document.getElementById('start-button');
-      const countdownEl = document.getElementById('countdown');
-
-      startBtn.addEventListener('click', () => {
-        startBtn.style.display = 'none';
-        startCountdown();
-      });
-
-      function startCountdown() {
-        let count = 3;
-        countdownEl.style.display = 'block';
-        countdownEl.textContent = count;
-
-        const interval = setInterval(() => {
-          count--;
-          if (count > 0) {
-            countdownEl.textContent = count;
-          } else {
-            clearInterval(interval);
-            countdownEl.style.display = 'none';
-            music.play();
-          }
-        }, 1000);
-      }
-    </script>
+ 
 
             <a-camera> 
             <a-cursor fuse= "true" fuse-timeout= "5000"></a-cursor>
@@ -135,5 +109,33 @@
             color="tomato">
         </a-box>
         </a-scene>
+         <script>
+      const music = document.getElementById('bg-music');
+      const startBtn = document.getElementById('start-button');
+      const countdownEl = document.getElementById('countdown');
+
+      startBtn.addEventListener('click', () => {
+        startBtn.style.display = 'none';
+        startCountdown();
+      });
+
+      function startCountdown() {
+        let count = 3;
+        countdownEl.style.display = 'block';
+        countdownEl.textContent = count;
+
+        const interval = setInterval(() => {
+          count--;
+          if (count > 0) {
+            countdownEl.textContent = count;
+          } else {
+            clearInterval(interval);
+            countdownEl.style.display = 'none';
+            music.play();
+          }
+        }, 1000);
+      }
+    </script>
+
     </body>
 </html>
